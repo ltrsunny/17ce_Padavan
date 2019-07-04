@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/sh
 
 echo "installing 17ce"
 if [ $# == 1 ]; then
