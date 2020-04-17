@@ -1,5 +1,5 @@
 #!/bin/sh
-
+CDN_BASE="https://raw.githubusercontent.com/ltrsunny/17ce_Padavan/master/master"
 echo "installing 17ce"
 if [ $# == 1 ]; then
 	echo "17CE账号：$1"	
@@ -15,7 +15,7 @@ rm -rf /tmp/17ce
 rm  -rf 17ce*
 killall -9 17ce_v3 2>/dev/null  >/dev/null
 cd /tmp
-wget --no-check-certificate -O 17ce_padavan_run.sh https://raw.githubusercontent.com/abczmx/17ce55/master/master/17ce_padavan_run.sh 2>/dev/null  >/dev/null
+wget --no-check-certificate -O 17ce_padavan_run.sh $CDN_BASE/17ce_padavan_run.sh 2>/dev/null  >/dev/null
 mkdir -p /etc/storage/17ce
 cp 17ce_padavan_run.sh /etc/storage/17ce/17ce_padavan_run.sh
 chmod +x  /etc/storage/17ce/17ce_padavan_run.sh
